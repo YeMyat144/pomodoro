@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
+    <title>Pomodoro</title>
     <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Pomodoro Timer</h1>
+        <h1>Pomodoro</h1>
         <div id="timer">25:00</div>
         <div class="controls">
             <button id="startBtn">Start</button>

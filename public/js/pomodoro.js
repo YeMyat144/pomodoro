@@ -49,9 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
             stopAllSounds(); // Stop any previously playing sounds
             startSound.play(); // Play the start sound
             timer = setInterval(() => {
-                timeLeft--;
-                updateDisplay();
-                if (timeLeft === 0) {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateDisplay();
+                } else {
                     clearInterval(timer);
                     isRunning = false;
 
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateDisplay();
     }
 
+    // Event listeners
     startBtn.addEventListener('click', startTimer);
     stopBtn.addEventListener('click', stopTimer);
     resetBtn.addEventListener('click', resetTimer);
@@ -106,5 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         Notification.requestPermission();
     }
 
+    // Initial display update
     updateDisplay();
 });
